@@ -1,3 +1,9 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+{{# if session.isAuthenticated}}
+    <p>
+        <a {{ action 'invalidateSession' }}>Logout</a>
+    </p>
+{{else}}
+    <p>
+        <a {{ action 'sessionRequiresAuthentication' }}>Login</a>
+    </p>
+{{/if}}
