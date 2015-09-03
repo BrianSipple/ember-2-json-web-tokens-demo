@@ -1,4 +1,6 @@
-{{# if session.isAuthenticated}}
+<h2 class="homepage__title">Welcome to the Ember 2.0 JWT example app</h2>
+
+{{#if session.isAuthenticated}}
     <p>
         <a {{ action 'invalidateSession' }}>Logout</a>
     </p>

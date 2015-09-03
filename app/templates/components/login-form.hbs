@@ -1,0 +1,22 @@
+<form {{action 'authenticate' on='submit'}}>
+
+    <div class="form__group">
+        <label for="identification">Login</label>
+        {{input type='text' value=identification placeholder='Enter Login' class='form__item'}}
+    </div>
+    
+    <div class="form__group">
+        <label for="password">Password</label>
+        {{input type='password' value=password placeholder='Enter Password' class='form__item'}}
+    </div>
+    
+    <button type="submit" class="btn btn__default">Login</button>    
+
+</form>
+
+
+{{#if errorMessage}}
+    <div class="alert alert--danger">
+        <strong>Login failed: </strong>{{errorMessage}}
+    </div>
+{{/if}}
