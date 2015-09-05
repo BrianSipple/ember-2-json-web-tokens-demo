@@ -1,4 +1,4 @@
-<form {{action 'authenticate' on='submit'}}>
+<form class="form" {{action 'authenticate' on='submit'}}>
 
     <div class="form__group">
         <label for="identification">Login</label>
@@ -10,7 +10,7 @@
         {{input type='password' value=password placeholder='Enter Password' class='form__item'}}
     </div>
     
-    <button type="submit" class="btn btn__default">Login</button>    
+    <button type="submit" class="btn btn__default form__submit-btn">Login</button>    
 
 </form>
 

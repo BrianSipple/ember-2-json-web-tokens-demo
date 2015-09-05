@@ -7,7 +7,7 @@ let BaseAuthorizer = Base.extend({
      * Gets the saved token and adds the Authorization 
      * header in each Ajax call.
      */
-    authorize: function (jqXHR, requestOptions) {
+    authorize: function (jqXHR /*, requestOptions */) {
         var accessToken = this.get('session.content.secure.token');
         if ( 
             this.get('session.isAuthenticated') && 

@@ -16,34 +16,37 @@ let BaseAuthenticator = Base.extend({
     },
     
     authenticate: function (options) {
-        
+                
         return new Ember.RSVP.Promise((resolve, reject) => {
-           
+                       
             // TODO: Create our own Promise-based, Pure JS AJAX helpers
             Ember.$.ajax({
                 url: this.tokenEndpoint,
                 type: 'POST',
                 data: JSON.stringify({
                     username: options.identification,
-                    password: options.passoword
+                    password: options.password
                 }),
                 contentType: 'application/json;charset=utf-8',
                 dataType: 'json'
             })
-            .then(function (response) {
-                Ember.run(function () {
-                    resolve({
-                        token: response.id_token
+            .then(
+                function (response) {
+                    debugger;
+                    return Ember.run(function () {
+                        resolve({
+                            token: response.id_token
+                        });
                     });
-                });
-            })
-            .catch(function (xhr, status, error) {
-                let response = xhr.responseText;
-                Ember.run(function () {
-                    reject(response);
-                });
-            });        
-        
+                }, 
+                function (xhr /*, status, error */) {
+                    debugger;
+                    let response = xhr.responseText;
+                    Ember.run(function () {
+                        reject(response);
+                    });
+                }
+            );                
         });        
     },
     

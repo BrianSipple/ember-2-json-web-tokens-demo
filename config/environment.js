@@ -22,10 +22,10 @@ module.exports = function (environment) {
         contentSecurityPolicy: {
             'default-src': "'none'",
             'script-src': "'self'",
-            'font-src': "'self'",
+            'font-src': "'self' https://fonts.gstatic.com/.*",  // Allow Google Fonts
             'connect-src': "'self' http://localhost:3001", // Allow data (ajax/websocket) from http://localhost:3001
             'img-src': "'self'",
-            'style-src': "'self' 'unsafe-inline'" // Allow inline styles
+            'style-src': "'self' 'unsafe-inline'", // Allow inline styles
             'media-src': "'self'"
         }
     };

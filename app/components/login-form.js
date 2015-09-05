@@ -3,6 +3,7 @@ import Ember from 'ember';
 let LoginForm = Ember.Component.extend({
     
     authenticator: 'authenticator:custom',
+    classNames: ['login-form'],
     
     actions: {
         authenticate: function () {

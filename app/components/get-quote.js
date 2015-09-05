@@ -17,7 +17,7 @@ let GetForm = Ember.Component.extend({
                             quote: response,
                             gotQuote: true
                         });
-                    },
+                    }.bind(this),
                     error: function () {
                         alert('An error occurred while processing the response');
                     }
