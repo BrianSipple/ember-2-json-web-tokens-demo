@@ -1,5 +1,7 @@
 # Ember-2-jwt-demo
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/BrianSipple/ember-2-json-web-tokens-demo.svg)](https://greenkeeper.io/)
+
 This is a small app built upon Ember 2 that demonstrates using Ember components and Promise-based XHR to retrieve data (Chuck Norris quotes!) from a Node-based API.
 
 ## Prerequisites
